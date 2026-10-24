@@ -156,6 +156,8 @@ jobs:
           flutter-version: '3.47.4'
           channel: stable
           cache: true
+      - name: Sync pubspec.lock
+        run: flutter pub get
       - name: Build Windows
         shell: pwsh
         run: ./scripts/build_windows.ps1 -AllSources
